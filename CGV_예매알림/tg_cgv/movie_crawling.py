@@ -1,15 +1,17 @@
 import requests
 import telegram
+from bot_token import bot
 from bs4 import BeautifulSoup
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-bot = telegram.Bot(token = '5038045836:AAHlx2ieZK4LH5yhzPEqhO8LI9TasoMenpI')
+from dev.CGV_예매알림.tg_cgv import bot_token
+
 url = 'http://www.cgv.co.kr/common/showtimes/iframeTheater.aspx?areacode=01&theatercode=0013&date=20220102'
 
 def jobfunction():
     html = requests.get(url)
     soup = BeautifulSoup(html.text, 'html.parser')
-
+    print(bot)
     print(soup)
 
     imax = soup.select_one('span.imax')
