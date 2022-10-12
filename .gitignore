@@ -6,7 +6,7 @@
 *.ppk
 
 ## bot token ##
-CGV_예매알림/tg_cgv/bot_token.py
+CGV_예매알림/tg_cgv/telegrambot.py
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
