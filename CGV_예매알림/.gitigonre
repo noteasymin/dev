@@ -1,0 +1,3 @@
+# ignore all .ppk .pem file
+*.ppk
+*.pem
